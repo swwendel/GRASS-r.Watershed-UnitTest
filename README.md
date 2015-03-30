@@ -14,9 +14,9 @@
 
 ## Requirements
 
-
 * Your favorite Python editor
-* GRASS GIS version
+* [GRASS GIS version 7.1 Devloper edition.](http://grass.osgeo.org/download/software/ms-windows/) 
+* Windows XP through Windows 8 or later in either 32 or 63 bit.
 
 ## Resources
 
@@ -39,21 +39,7 @@ Anyone and everyone.
 
 ## Licensing
 
-Currently set to Apache License though this needs to be verified as appropriate for the development of this test.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+[GRASS](http://grass.osgeo.org/home/copyright/) and this Unit Test follow the GNU General Public License.
 
 
 A copy of the license is available in the repository's [license.txt](https://github.com/swwendel/GRASS-r.Watershed-UnitTest.git/master/license.txt) file.
