@@ -6,8 +6,8 @@ Purpose:    This script is to demonstrate a unit test for GRASS's r.Watershed
 
 Author:     Stephanie Wendel - sawendel
 GRASS:      7.1.svn-r64925-36
-Version:    1.0
-Modified:   3/30/2015
+Version:    1.1
+Modified:   3/3/2015
 Copyright:  (c) sawendel 2015
 Licence:    GNU GPL
 """
@@ -31,22 +31,20 @@ class TestWatershed(grass.gunittest.TestCase):
         """Remove the temporary region"""
         self.del_temp_region()
 
+    def tearDown(self):
+        """Remove the outputs created from the watershed module after each test
+        is run."""
+        self.runModule('g.remove', flags='f', type='raster',
+            name='test_accumulation,test_basin')
+
     def test_OutputCreated(self):
         """Test to see if the outputs are created"""
-        #find the list of maps
-        maps = get_list_of_maps()
-        #see if the accumulation output is in the mapset
-        self.assertNotIn('test_accumulation', maps,
-            msg='The output test_accumulation already exists')
-        #see if the basin output is in the mapset
-        self.assertNotIn('test_basin', maps,
-            msg='The output test_basin already exists')
         #run the watershed module
         self.assertModule('r.watershed', elevation='elevation',
             threshold='10000', accumulation='test_accumulation',
             basin='test_basin')
         #check to see if accumulation output is in mapset
-        self.assertRasterExists('test_acccumulation',
+        self.assertRasterExists('test_accumulation',
             msg='test_accumulation output was not created')
         self.assertRasterExists('test_basin',
             msg='test_basin output was not created')
