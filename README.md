@@ -2,7 +2,7 @@
 
 ## Features
 
-* version 1.2
+* version 1.3
 * Tests the r.watershed module of GRASS GIS.
 
 
@@ -10,6 +10,19 @@
 
 
 1. Fork and then clone the repo.
+2. Edit and add to the code.
+
+-or-
+
+1. Download the .py file.
+2. Open GRASS developer edition on a non-admin user account.
+3. Select the database directory that has the North Carolina Sample data in it.
+4. Choose North_Carolina as the GRASS Location. 
+5. Create a New Mapset.
+6. Start a GRASS Session. 
+7. In the Command Line, type 'python' followed by the location to the script. ie, python C:\Users\<username>\grassdata\GRASS_rWatershed_UnitTest.py
+
+The test will run and show the results in the command line window.
 
 
 
@@ -18,6 +31,7 @@
 * Your favorite Python editor
 * [GRASS GIS version 7.1 Devloper edition.](http://grass.osgeo.org/download/software/ms-windows/) 
 * Windows XP through Windows 8 or later in either 32 or 63 bit.
+* North Carolina sample data avaiable through the installer.
 
 ## Resources
 
