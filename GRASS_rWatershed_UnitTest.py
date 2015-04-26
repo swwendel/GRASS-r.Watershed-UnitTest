@@ -6,7 +6,7 @@ Purpose:    This script is to demonstrate a unit test for GRASS's r.Watershed
 
 Author:     Stephanie Wendel - sawendel
 GRASS:      7.1.svn-r665096-56
-Version:    1.3
+Version:    1.4
 Modified:   4/20/2015
 Copyright:  (c) sawendel 2015
 Licence:    GNU GPL
@@ -60,25 +60,25 @@ class TestWatershed(grass.gunittest.TestCase):
             slope_steepness=self.slopesteepness)
         #check to see if accumulation output is in mapset
         self.assertRasterExists(self.accumulation,
-            msg='test_accumulation output was not created')
+            msg='accumulation output was not created')
         #check to see if drainage output is in mapset
         self.assertRasterExists(self.drainage,
-            msg='test_drainage output was not created')
+            msg='drainage output was not created')
         #check to see if basin output is in mapset
         self.assertRasterExists(self.basin,
-            msg='test_basin output was not created')
+            msg='basin output was not created')
         #check to see if stream output is in mapset
         self.assertRasterExists(self.stream,
-            msg='test_stream output was not created')
+            msg='stream output was not created')
         #check to see if half.basin output is in mapset
         self.assertRasterExists(self.halfbasin,
-            msg='test_halfbasin output was not created')
+            msg='half.basin output was not created')
         #check to see if length.slope output is in mapset
         self.assertRasterExists(self.slopelength,
-            msg='test_lengthslope output was not created')
+            msg='length.slope output was not created')
         #check to see if slope.steepness output is in mapset
         self.assertRasterExists(self.slopesteepness,
-            msg='test_slopesteepness output was not created')
+            msg='slope.steepness output was not created')
 
     def test_fourFlag(self):
         """Test the -4 flag to see if the stream and slope lengths are
@@ -132,8 +132,6 @@ class TestWatershed(grass.gunittest.TestCase):
         self.assertModule('r.watershed', elevation=self.elevation,
             threshold='10000', basin=self.basin)
         #Make sure the minimum value is 0 for basin value representing unique positive integer.
-        #minvalue = 'min>=0'
-        #self.assertRasterFitsUnivar(raster=self.basin, reference=minvalue)
         self.assertRasterMinMax(self.basin, 0, 1000000,
             msg='A basin value is less than 0 or greater than 1000000')
 
