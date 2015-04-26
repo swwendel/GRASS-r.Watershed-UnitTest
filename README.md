@@ -2,7 +2,7 @@
 
 ## Features
 
-* version 1.3
+* version 1.4
 * Tests the r.watershed module of GRASS GIS.
 
 
