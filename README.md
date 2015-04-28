@@ -54,7 +54,7 @@ Anyone and everyone.
 
 ## Licensing
 
-[GRASS](http://grass.osgeo.org/home/copyright/) and this Unit Test follow the GNU General Public License.
+GRASS follows the GNU General Public License.
+A copy of the license is available in the repository's license.txt file.
 
-
-A copy of the license is available in the repository's [license.txt](https://github.com/swwendel/GRASS-r.Watershed-UnitTest.git/master/license.txt) file.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Understanding the r.watershed module for development of a testing suite using GRASS’s testing framework and Python.</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/swwendel/GRASS-r.Watershed-UnitTest" property="cc:attributionName" rel="cc:attributionURL">Stephanie Wendel</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
